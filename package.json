@@ -11,7 +11,7 @@
     "buildTo102": "node node_modules/webpack/bin/webpack.js  --no-progress --hide-modules  --config build/webpack.dev.conf.js "
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "babel-polyfill": "^6.26.0",
     "cropper": "^4.0.0",
     "dplayer": "^1.25.0",
