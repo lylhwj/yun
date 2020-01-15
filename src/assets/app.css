@@ -1,0 +1,89 @@
+#app {
+  height: 100%;
+}
+
+.box-warpper {
+  min-width: 1350px;
+  height: 100%;
+}
+
+/* 动画过渡 */
+.slide-right-enter-active,
+.slide-right-leave-active,
+.slide-left-enter-active,
+.slide-left-leave-active {
+  will-change: transform;
+  transition: all 500ms;
+  height: 100%;
+  width: 100%;
+  top: 70px;
+  position: absolute;
+  backface-visibility: hidden;
+  perspective: 1000;
+}
+
+.slide-right-enter {
+  -webkit-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
+}
+
+.slide-right-leave-active {
+  -webkit-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+}
+
+.slide-left-enter {
+  -webkit-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+}
+
+.slide-left-leave-active {
+  -webkit-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
+}
+
+/* layer */
+
+.layui-layer { 
+  border-radius: 5px !important;
+}
+
+.layui-layer-title { 
+  height: 48px;
+  line-height: 48px; 
+  border-radius: 5px 5px 0 0 !important;
+}
+
+/* 空表格 */
+.none_warpper{
+  height: 300px;
+}
+
+
+/* .Rclick.vue-contextmenu-listWrapper {
+  border: 1px solid #ebeef5;
+  border-radius: 5px;
+}
+
+.Rclick.vue-contextmenu-listWrapper li {
+  width: 100px !important;
+}
+
+.Rclick.vue-contextmenu-listWrapper .no-child-btn {
+  text-align: center !important;
+  width: 100px !important;
+  background: #fff !important;
+  color: #666 !important;
+}
+
+.Rclick.vue-contextmenu-listWrapper .no-child-btn i {
+  display: none;
+}
+
+.Rclick.vue-contextmenu-listWrapper .no-child-btn span {
+  float: none !important;
+}
+
+.Rclick.vue-contextmenu-listWrapper .context-menu-list .no-child-btn:hover { 
+  color: #fff !important;
+} */

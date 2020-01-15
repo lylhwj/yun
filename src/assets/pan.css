@@ -1,0 +1,424 @@
+@charset "utf-8";
+.border_none.el-table td { border:0; }
+.scrollbar::-webkit-scrollbar,.scrollbar .el-table__body-wrapper::-webkit-scrollbar{ width:6px; height:6px; }
+.scrollbar::-webkit-scrollbar-thumb,.scrollbar .el-table__body-wrapper::-webkit-scrollbar-thumb{ background:#a6a6a6; }
+ 
+.view_box2{background: #fff;}
+.view_box2 .el-checkbox__inner:before { display:inline-block; float:left; width:10px; height:10px; margin:1px; border-radius:2px;box-sizing:border-box; background:linear-gradient(45deg,#fff,#dcdcdc); content:"" }
+.view_box2 .el-checkbox__input.is-checked .el-checkbox__inner:before { display:none; }
+.w-table.el-table th, .w-table.el-table tr { background:#fafafa; }
+.w-table.el-table--striped .el-table__body tr.el-table__row--striped td{ background:#fff; }
+.w-table.el-table--striped .el-table__body tr:hover.el-table__row--striped td{ background:#f5f7fa; }
+/*------------------ pan头部 ------------------*/
+.pan_top { margin:45px 20px 0 20px; }
+.pan_head { height:30px; line-height:30px; padding:20px 20px 30px; border-bottom:1px solid #fafafa; }
+.pan_head { height:30px; line-height:30px; padding:20px 20px 30px; border-bottom: 1px solid #f9f9f9;}
+.cc tr:hover .opo_list { display:block; }
+.cc tr:hover .time { display:none; } 
+.pan_head .el-breadcrumb { position:absolute; float:left; height:30px; margin-left:45px; overflow:hidden; line-height:30px; font-size:16px; }
+.btn_pan,.btn_pan_border { display:inline-block; min-width:86px; height:30px; padding:0 12px; overflow:hidden; margin-right:8px; border:1px solid #409eff; background:#409eff; border-radius:4px; box-shadow:0 0 5px #fdfdfd; text-align:center; color:#fff; -webkit-transition:all .5s; transition:all .5s; }
+.btn_pan_border { border-color:#b0daff; background:#edf6ff; color:#409eff; }
+.btn_pan [class^=pico_] { display:inline-block; width:25px; height:30px; margin:0 5px 0 0; background:url(./icon_new.svg) 0 -40px; vertical-align: middle; }
+.btn_pan [class$=upload] { background-position:0 -40px; }/*上传文件*/
+.btn_pan [class$=uploadBT] { background-position:-25px -40px; }/*离线下载-BT*/
+.btn_pan [class$=new] { background-position:-50px -40px; }/*新建*/
+.btn_pan [class$=task] { background-position:-75px -40px; }/*传输任务*/
+.btn_pan [class$=back] { background-position:-93px -100px; }/*返回*/
+.btn_pan [class$=newFav] { background-position:-180px -40px; }/*新建收藏夹*/
+.btn_pan [class$=empty] { background-position:-180px -70px; }/*清空回收站*/
+.btn_pan:hover { box-shadow:0 0 5px #54b9ff; color:#fff; }
+.btn_pan_border:hover { color:#409eff; }
+.ico_expand,.ico_grids,.ico_lists,.ico_return,.ico_dots { display:inline-block; width:30px; height:30px; background:url(../assets/icon_new.svg) 0 -70px; }
+.ico_grids { background-position-x:-30px; }
+.ico_lists { background-position-x:-60px; }
+.ico_return { background-position-x:-90px; }
+.ico_dots { background-position:-205px -40px; }
+.ico_dots:hover { background-position-y:-70px; }
+.ico_expand:hover,.ico_grids:hover,.ico_lists:hover,.ico_return:hover { background-position-y:-100px; }
+.ico_expand { margin-left:15px; margin-right:13px; }
+/*扩容弹框*/
+.progredd_box { width:294px; margin:20px; }
+.progredd_bar { height:10px; margin:5px 0 10px; background:#e0e0e0; border-radius:10px; }
+.progredd_bar div { height:10px; min-width:4%; background:#409eff; border-radius:10px; }
+/*-- 搜索框 --*/
+.pan_search { position:relative; width:300px; }
+.sear_text{ width:100%; height:30px; padding:2px 28px 2px 18px; box-sizing:border-box; border:1px solid #f5f5f5; border-radius:30px; background:#f5f5f5; color:#333; font-size:12px;  }
+.sear_text::placeholder { color:#ccc; }
+.sear_btn,.sear_clear{ position:absolute; top:5px; width:20px; height:20px; background:url(icon_search.svg); opacity:.5; transition:all .2s; }
+.sear_btn { right:10px; border:0; }
+.sear_clear { display:block; right:35px; background-position:-20px 0; text-indent:-1000em; }
+.sear_btn:hover,.sear_clear:hover { opacity:1; }
+/*批量*/
+.opo_bar { position:absolute; left:65px; z-index:9; width:calc(100% - 90px); background:#fff; box-sizing:border-box; }
+.opo_list a { padding-right:10px; color:#50b4ff; cursor:pointer; }
+.opo_list a:after { display:inline-block; width:1px; height:12px; margin-left:12px; background:#50b4ff; vertical-align:middle; content:""; }
+.opo_list a:last-child:after { display:none; } 
+.opo_list a:before { display:inline-block; width:20px; height:20px; margin-right:5px; background:url(../assets/icon_new.svg); vertical-align:middle; content:""; }
+.opo_list a.nremane:before { background-position-x:0; } /*重命名*/
+.opo_list a.nmove:before { background-position-x:-20px; }/*移动*/
+.opo_list a.nfav:before { background-position-x:-40px; }/*收藏*/
+.opo_list a.nencrypt:before { background-position-x:-60px; }/*加密*/
+.opo_list a.ndel:before { background-position-x:-80px; }/*删除*/
+.opo_list a.ndown:before { background-position-x:-100px; }/*下载*/
+.opo_list a.ndetail:before { background-position-x:-120px; }/*详细*/
+.opo_list a.nmore:before { background-position-x:-140px; }/*更多*/
+.opo_list a.nopen:before { background-position-x:-160px; }/*打开*/
+.opo_list a.nrecover:before { background-position-x:-180px; }/*恢复*/
+.opo_list a.nremove:before { background-position-x:-200px; }/*移除*/
+.opo_list a.nnext:before { background-position-x:-220px; }/*下一首播放*/
+.opo_list a.nadd:before { background-position-x:-240px; }/*添加到歌单*/
+.opo_list a:hover { color:#0688ff; }
+.opo_list a:hover:before { background-position-y:-20px; }
+.Trhover tr:hover .opo_list { display:block; }
+.Trhover tr:hover .time { display:none; } 
+/*右键菜单*/
+.Rclick.vue-contextmenu-listWrapper { border-radius:8px; box-shadow:0 0 6px #e5e5e5;  }
+.Rclick.vue-contextmenu-listWrapper .context-menu-list { height:40px; }
+.Rclick.vue-contextmenu-listWrapper .no-child-btn { text-align:center;width: 90px;height:30px;}
+.Rclick.vue-contextmenu-listWrapper .no-child-btn .nav-name-right {height: 28px; line-height: 28px;margin: 0 10px 0 20px;}
+.Rclick.vue-contextmenu-listWrapper .context-menu-list .no-child-btn:hover { box-shadow:0 0 0; border-radius:0; color: #fff;}
+.Rclick.vue-contextmenu-listWrapper .context-menu-list:first-child .no-child-btn,
+.Rclick.vue-contextmenu-listWrapper .context-menu-list:first-child .no-child-btn:hover { border-radius:8px 8px 0 0; }
+.Rclick.vue-contextmenu-listWrapper .context-menu-list:last-child .no-child-btn,
+.Rclick.vue-contextmenu-listWrapper .context-menu-list:last-child .no-child-btn:hover { border-radius:0 0 8px 8px; }
+.Rclick.vue-contextmenu-listWrapper .context-menu-list .no-child-btn i { display:inline-block;top: 10px; width:20px; height:20px; margin-right:5px; margin-left:8px; background:url(../assets/icon_new.svg); vertical-align:middle; }
+.Rclick.vue-contextmenu-listWrapper .context-menu-list .no-child-btn i.rremane { background-position-x:0; } /*重命名*/
+.Rclick.vue-contextmenu-listWrapper .context-menu-list .no-child-btn i.rmove { background-position-x:-20px; }/*移动*/
+.Rclick.vue-contextmenu-listWrapper .context-menu-list .no-child-btn i.rfav { background-position-x:-40px; }/*收藏*/
+.Rclick.vue-contextmenu-listWrapper .context-menu-list .no-child-btn i.rencrypt { background-position-x:-60px; }/*加密*/
+.Rclick.vue-contextmenu-listWrapper .context-menu-list .no-child-btn i.rdel { background-position-x:-80px; }/*删除*/
+.Rclick.vue-contextmenu-listWrapper .context-menu-list .no-child-btn i.rdown { background-position-x:-100px; }/*下载*/
+.Rclick.vue-contextmenu-listWrapper .context-menu-list .no-child-btn i.rdetail { background-position-x:-120px; }/*详细*/
+.Rclick.vue-contextmenu-listWrapper .context-menu-list .no-child-btn i.rmore { background-position-x:-140px; }/*更多*/
+.Rclick.vue-contextmenu-listWrapper .context-menu-list .no-child-btn i.ropen { background-position-x:-160px; }/*打开*/
+.Rclick.vue-contextmenu-listWrapper .context-menu-list .no-child-btn i.rrecover { background-position-x:-180px; }/*恢复*/
+.Rclick.vue-contextmenu-listWrapper .context-menu-list .no-child-btn i.rremove { background-position-x:-200px; }/*移除*/
+
+/* .Rclick.vue-contextmenu-listWrapper .context-menu-list .no-child-btn i.rremove { background-position-x:-220px; } 
+.Rclick.vue-contextmenu-listWrapper .context-menu-list .no-child-btn i.rremove { background-position-x:-240px; } 
+.Rclick.vue-contextmenu-listWrapper .context-menu-list .no-child-btn i.rremove { background-position-x:-260px; }  */
+.Rclick.vue-contextmenu-listWrapper .context-menu-list .no-child-btn:hover i { background-position-y:-130px; }
+/*------------------ pan右侧 ------------------*/
+.pan_table { position:relative; background:#fff; }
+.file_nav { padding:20px; }
+.file_nav .el-breadcrumb { float:left; height:14px; margin:3px 0 0 60px; overflow:hidden; }
+.btn_pan_box { margin:52px 20px 0 20px; }
+.btn_tip_box { position:absolute; right:0; top:18px; height:24px; padding:0 18px 0 10px; background:#fff; }
+.tico_return { display:inline-block; width:40px; height:24px; background:url(./icon.svg) -396px -175px; }
+.tico_return:hover { background:url(./icon.svg) -438px -145px; }
+/*-- 文件容量 
+.ico_up,.ico_down,.ico_stop,.ico_start { display:inline-block; width:16px; height:16px; background:url(./icon.svg) -195px -200px; vertical-align:middle; }
+.ico_down { background-position:-211px -200px; }
+.ico_stop { background-position:-227px -200px; }
+.ico_start { background-position:-243px -200px; }
+.ico_kuorong { display:inline-block; width:28px; height:20px;margin-left:10px; background:url(./icon.svg) -71px -108px; vertical-align:middle; }
+.ico_kuorong:hover { background-position:-71px -142px; }--*/
+/*-- 左侧按钮 --*/
+/*.btn_pan [class$=expansion] { background-position-x:-68px; }扩容网盘*/
+/*.btn_pan [class$=history] { background-position-x:-102px; }最近打开*/
+/*.btn_pan [class$=mark] { background-position-x:-136px; }查看标记*/
+/*.btn_pan [class$=uploadLX] { background-position-x:-170px; }离线下载-上传*/
+/*-- 右侧按钮 --*/
+.btn_tip { display:inline-block; width:40px; height:24px; overflow:hidden; margin-right:4px; text-align:center; color:#fff; -webkit-transition:all .5s; transition:all .5s; }
+.btn_tip .txt { display:none; width:40px; height:24px; background:#bfbfbf; color:#fff; line-height:24px; }
+.btn_tip .txt_move{ background:#6fb6f8; }
+.btn_tip .txt_copy{ background:#ffb769; }
+.btn_tip .txt_mark{ background:#a1bdc6; }
+.btn_tip .txt_rename{ background:#ff7489; }
+.btn_tip .txt_encrypt{ background:#99ddda; }
+.btn_tip .txt_download{ background:#ddd24a; }
+.btn_tip .txt_delete{ background:#b58d71; }
+.btn_tip [class^=tico_] { display:block; width:40px; height:24px; background:url(./icon.svg) 0 -175px; }
+.btn_tip [class$=move] { background-position-x:0; }/*移动*/
+.btn_tip [class$=copy] { background-position-x:-40px; }/*复制*/
+.btn_tip [class$=mark] { background-position-x:-80px; }/*标记*/
+.btn_tip [class$=rename] { background-position-x:-120px; }/*重命名*/
+.btn_tip [class$=encrypt] { background-position-x:-160px; }/*加密*/
+.btn_tip [class$=download] { background-position-x:-200px; }/*下载*/
+.btn_tip [class$=delete] { background-position-x:-240px; }/*删除*/
+.btn_tip [class$=list] { background-position-x:-280px; }/*列表查看*/
+.btn_tip [class$=grid] { background-position-x:-320px; }/*格子查看*/
+.btn_tip [class$=filter] { background-position-x:-360px; }/*筛选*/
+.btn_tip:hover .txt { display:block; }
+.btn_tip:hover [class^=tico_] { display:none; }
+.tico_download2 { display:block; width:25px; height:20px; background:url(./icon.svg)-450px -177px; }
+/*-- 文件类型 --*/
+.type_folder_pass,.type_folder,.type_rar,.type_eps,.type_ai,.type_psd,.type_dwg,.type_aut,.type_svg,.type_cdr,.type_3ds,
+.type_sql,.type_ppt,.type_doc,.type_xls,.type_txt,.type_csv,.type_pdf,.type_otf,.type_ttf,.type_ttc,.type_woff,
+.type_jpg,.type_png,.type_gif,.type_bmp,.type_ico,.type_unknown,.type_raw,.type_iff,.type_dng,.type_flv,.type_swf,
+.type_mp4,.type_avi,.type_mov,.type_wmv,.type_asf,.type_mkv,.type_mp3,.type_wav,.type_aac,.type_wna,.type_ogg,
+.type_java,.type_js,.type_html,.type_php,.type_css,.type_iso,.type_dll,.type_txt_pass,.type_bt,.type_down,.type_error,.type_yes,.type_lixian,.type_yes_pass,.type_fav
+{ display:inline-block; position:relative; width:40px; height:40px; background:url(./pico_type.svg) 0 0; }
+.type_folder_pass { background-position:0 0; }
+.type_folder { background-position:-50px 0; }
+.type_rar { background-position:-100px 0; }
+.type_eps { background-position:-150px 0; }
+.type_ai { background-position:-200px 0; }
+.type_psd { background-position:-250px 0; }
+.type_dwg { background-position:-300px 0; }
+.type_aut { background-position:-350px 0; }
+.type_svg { background-position:-400px 0; }
+.type_cdr { background-position:-450px 0; }
+.type_3ds { background-position:-500px 0; }
+.type_sql { background-position:0 -50px; }
+.type_ppt { background-position:-50px -50px; }
+.type_doc { background-position:-100px -50px; }
+.type_xls { background-position:-150px -50px; }
+.type_txt { background-position:-200px -50px; }
+.type_csv { background-position:-250px -50px; }
+.type_pdf { background-position:-300px -50px; }
+.type_otf { background-position:-350px -50px; }
+.type_ttf { background-position:-400px -50px; }
+.type_ttc { background-position:-450px -50px; }
+.type_woff { background-position:-500px -50px; }
+.type_jpg { background-position:0 -100px; }
+.type_png { background-position:-50px -100px; }
+.type_gif { background-position:-100px -100px; } 
+.type_bmp { background-position:-150px -100px; }
+.type_ico { background-position:-200px -100px; }
+.type_unknown { background-position:-250px -100px; }
+.type_raw { background-position:-300px -100px; }
+.type_iff { background-position:-350px -100px; }
+.type_dng { background-position:-400px -100px; }
+.type_flv { background-position:-450px -100px; }
+.type_swf { background-position:-500px -100px; }
+.type_mp4 { background-position:0 -150px; }
+.type_avi { background-position:-50px -150px; }
+.type_mov { background-position:-100px -150px; }
+.type_wmv { background-position:-150px -150px; }
+.type_asf { background-position:-200px -150px; }
+.type_mkv { background-position:-250px -150px; }
+.type_mp3 { background-position:-300px -150px; }
+.type_wav { background-position:-350px -150px; }
+.type_aac { background-position:-400px -150px; }
+.type_wna { background-position:-450px -150px; }
+.type_ogg { background-position:-500px -150px; }
+.type_java { background-position:0 -200px; }
+.type_js  { background-position:-50px -200px; }
+.type_html { background-position:-100px -200px; }
+.type_php { background-position:-150px -200px; }
+.type_css { background-position:-200px -200px; }
+.type_iso { background-position:-250px -200px; }
+.type_dll { background-position:-300px -200px; }
+.type_txt_pass { background-position:-350px -200px; }
+.type_bt { background-position:-400px -200px; }
+.type_fav { background-position:-450px -200px; }
+.type_folder2 { display:inline-block; width:20px; height:20px; background:url(type_folder2.png); background-size:cover; vertical-align:middle; }
+.type_down { background:url(./pico_type2.svg) 0 0; }
+.type_down:before { display:inline-block; position:absolute; top:10px; left:12px; width:9px; height:10px; background:url(../assets/pico_type2.svg) -202px 0; content:"";-webkit-animation: arrow 1.5s infinite ease-in-out; }
+@-webkit-keyframes arrow {
+0%   { opacity:0; -webkit-transform:translate(0, 0px) }
+50%  { opacity:1; -webkit-transform:translate(0, 5px) }
+100% { opacity:0; -webkit-transform:translate(0, 10px) }
+}
+.type_error { background:url(./pico_type2.svg) -40px 0; }
+.type_yes { background:url(./pico_type2.svg) -80px 0; }/*完成*/
+.type_lixian { background:url(./pico_type2.svg) -120px 0; }/*离线下载*/
+.type_yes_pass { background:url(./pico_type2.svg) -160px 0; }/*加密下载完成*/
+/*-- 文件grid列表 --*/
+.grid_list { margin:0 10px 10px 0; }
+.grid_list li { float:left; width:138px; height:177px; margin:10px 0 0 10px; padding:10px; }
+.grid_list p.name { height:60px; overflow:hidden; line-height:20px; word-wrap:break-word; }
+.grid_list p.gray { display:none; }
+.grid_list li:hover { background:#f5fafe; }
+.grid_list li:hover p.gray { display:block; }
+/*-- 筛选文件弹出框 --*/
+.order_box li { height:58px; padding:0 20px; }
+.order_box a { display:inline-block; float:left; width:135px; margin:17px 0; }
+.order_box a span { display:inline-block; width:20px; height:20px; margin-right:5px; background:url(./icon.svg) 0 -200px; vertical-align:middle; }
+.order_box a span[class$=new] { background-position-x:0; }/*最近*/
+.order_box a span[class$=text] { background-position-x:-20px; }/*文档*/
+.order_box a span[class$=rar] { background-position-x:-40px; }/*压缩包*/
+.order_box a span[class$=encrypt] { background-position-x:-60px; }/*加密*/
+.order_box a span[class$=photo] { background-position-x:-80px; }/*照片*/
+.order_box a span[class$=video] { background-position-x:-100px; }/*视频*/
+.order_box a span[class$=audio] { background-position-x:-120px; }/*音频*/
+.order_box a span[class$=other] { background-position-x:-140px; }/*其它*/
+.order_box a span[class$=all] { background-position-x:-160px; }/*全部*/
+/*-- 文件标记 --*/
+.file_tag.el-tag { margin:0 6px 10px 0; padding:4px 12px; height:auto; font-size:14px; }
+.file_tag .el-icon-close { width:18px; height:18px; margin-left:6px; line-height:18px; font-size:16px; }
+.file_tag.el-tag a { color:#409EFF; }
+.file_tag.el-tag--success a { color:#67C23A; }
+.file_tag.el-tag--warning a { color:#E6A23C; }
+.file_tag.el-tag--danger a { color:#F56C6C; }
+.file_tag.el-tag--info a { color:#909399; }
+.marke_list { height: 229px; overflow-y:scroll; border-bottom:1px solid #ebeef5; }
+.marke_list li { padding:0 10px; border-top:1px solid #ebeef5; line-height:45px; }
+.marke_list li:nth-child(1) { border:0; }
+.mask-item {cursor: pointer;}
+.mask-item:hover {background-color: #ecf5ff;}
+.mask-item.active {background-color: #a8cbf7;color: #fff;}
+/*-- 弹出框的文件列表 --*/
+.el-table_pad5.el-table td { padding:5px 0; border:0; }
+.mark_add,.mark_del,.mark_add_folder { display:inline-block; width:40px; height:40px; background:url(./icon.svg) -280px 0; }
+.mark_del { background-position:-325px 0; }
+.mark_add:hover,.mark_del:hover { background-position-y:-45px; }
+.mark_add_folder { width:45px; background-position:-370px 0; }
+/*-- 标记快捷方式 --*/
+.mark_tip_pop,.dot_pop { min-width:auto; padding:0; }
+.mark_tip_pop .popper__arrow { display:none; }
+.mark_tip { width:100px; border-radius:4px; line-height:30px; }
+.mark_tip dt { background:#a1bdc6; border-radius:4px 4px 0 0; color:#fff; }
+.mark_tip dd a { display:block; }
+.mark_tip dd a:hover { background:#f7f7f7; color:#666; }
+/*-- 最近弹出框 --*/
+.recent_box { width:896px; height:510px; overflow:hidden; border-radius:5px; box-shadow:0 0 8px #ccc; }
+.recent_ico_close,.recent_ico_order,.recent_ico_list,.recent_ico_grid { display:inline-block; width:30px; height:30px; background:url(./icon.svg) 0 -220px; }
+.recent_ico_order { background-position:-30px -220px; }
+.recent_ico_list { background-position:-60px -220px; }
+.recent_ico_grid { background-position:-90px -220px; }
+.recent_grid { width:878px; height:412px; padding:3px 8px 0 10px;overflow-y:scroll; }
+.recent_grid::-webkit-scrollbar{width:2px; height:2px; }
+.recent_grid::-webkit-scrollbar-thumb{ background:#a6a6a6; }
+.recent_grid li { float:left; width:185px; margin:14px 7px 0; padding:10px; background:#fafafa; }
+.recent_grid li div { display:flex; align-items:center; justify-content:center; height:100px; padding:10px; background:#bfd1e0; }
+.recent_grid li div img { max-width:165px; max-height:100px; }
+.recent_grid li:hover { background:#e4eaef; }
+.recent_grid li:hover div { background:#b2c8da; }
+.recent_table.el-table thead { color:#1790ff; }
+.recent_table .el-table_1_column_4 { padding-left:30px; }
+.recent_table .el-table__body-wrapper::-webkit-scrollbar{ width:2px; height:2px; }
+.recent_table .el-table__body-wrapper::-webkit-scrollbar-thumb{ background:#a6a6a6; }
+/*-- 上传文件弹出框 --*/
+.upload_box .el-upload { display:block; }
+.upload_box .el-upload-dragger { width:530px; height:170px; margin:30px auto; padding:25px 0 0; } 
+.upload_box .el-upload-dragger .el-upload__text { font-size:16px; }
+.ico_del,.ico_yes,.ico_upload { display:inline-block; width:88px; height:88px; background:url(./pico_88.svg); }
+.ico_yes { background-position:-88px 0; } 
+.ico_upload { background-position:-176px 0; }
+/*------------------ 弹出下载框 --------------
+.box_open { width:300px; height:720px; border-radius:10px; background:#fff; box-shadow:0 0 5px #ccc; }
+.box_open .rel { height:147px; border-radius:5px 5px 0 0; background:linear-gradient(to bottom,#83d0ff,#0095ff); color:#fff; }
+.box_open .rel a:hover { color:#fff; }
+.list_head.el-tabs--border-card { box-shadow:none; border:none; }
+.list_head.el-tabs--top.el-tabs--border-card .el-tabs__item:nth-child(2),
+.list_head.el-tabs--top.el-tabs--border-card .el-tabs__item:last-child { padding:0; }
+.list_head.el-tabs--border-card>.el-tabs__header .el-tabs__item.is-active { border:none; background:#eef7ff; color:#484848; }
+.list_head.el-tabs--border-card>.el-tabs__header .el-tabs__item.is-active .num { background:#de5f49; }
+.list_head.el-tabs--border-card>.el-tabs__header { border:0; }
+.list_head.el-tabs--border-card>.el-tabs__header .el-tabs__item { margin:0; border:none; }
+.list_head.el-tabs--border-card>.el-tabs__content { padding:0; }
+.list_head .el-tabs__nav { display:flex; justify-content:space-around; float:none; }
+.list_head .el-tabs__item { width:33.33%; padding:0; text-align:center; }
+.num { display:inline-block; height:18px; min-width:10px; padding:0 4px; border-radius:18px; background:#d6d6d6; color:#fff; line-height:18px; }
+.list_down { height:314px; padding:20px 0 0 12px; overflow-y:auto; }
+.list_down::-webkit-scrollbar{ width:2px; height:2px; }
+.list_down::-webkit-scrollbar-thumb{ background:#a6a6a6; }
+.list_down dl { margin-bottom:15px; overflow:hidden; }
+.list_down dt { float:left; width:50px; }
+.list_down dd { position:relative; float:left; width:250px; }
+.list_down dd p.name { width:200px; height:25px; overflow:hidden; line-height:25px; white-space:nowrap; text-overflow:ellipsis; }
+.list_down .el-progress-bar { margin-right:-26px; padding-right:26px; }
+.list_down .el-progress__text,.progress_green { display:inline-block; width:16px; height:16px; border-radius:50%; background:#54b82a; }
+.list_down .el-icon-circle-close:before,.progress_green:before{ display:inline-block; width:10px; height:10px; margin:3px; vertical-align:middle; border-radius:50%; content:""; background:url(../assets/icon.svg) -410px -200px; }
+.progress_green { position:absolute; top:5px; right:0; }
+.progress_green:before { vertical-align:top; }
+.progress_blue .el-progress__text { background:#0688ff; }
+.progress_yellow .el-progress__text{ background:#ffcc00; }
+.progress_red .el-progress__text { background:#f56c6c; } 
+.progress_blue .el-icon-circle-close:before { background-position:-364px -200px; }
+.progress_yellow .el-icon-circle-close:before { background-position:-380px -200px; }
+.progress_red .el-icon-circle-close:before { background-position:-395px -200px; }
+上传下载飞机
+.pico_down,.pico_up,.pico_fast,.pico_dot,.pico_vip { display:inline-block; width:10px; height:10px; background:url(./icon.svg) -425px -200px; }
+.pico_up { background-position:-440px -200px; }
+.pico_fast { width:13px; height:13px; background-position:-350px -200px; }
+.pico_dot { position:absolute; top:17px; right:7px; width:18px; height:20px; background-position:-327px -200px; }
+.pico_vip { width:17px; height:17px; background-position:-305px -200px; vertical-align:middle; }
+.pico_close { display:block; width:76px; height:16px; background:rgba(0,0,0,.17); border-radius:3px; margin:10px auto; text-align:center; }
+.pico_close:before { display:inline-block; width:40px; height:16px; background:url(./icon.svg) -260px -200px; content:""; }----*/
+/*------------------ 文件空间扩容 ------------------*/
+.table_2 { margin:20px auto; }
+.table_2 td { padding:8px 10px 5px 0; }
+.bank_list li { position:relative; float:left; width:96px; height:32px; margin:5px 10px 5px 0; padding:3px 5px; border:1px solid #ddd; color:#666; line-height:32px; cursor:pointer; }
+.bank_list li input { display:none; }
+.bank_list li label b { display:none; }
+.bank_list .check { display:none; position:absolute; right:0; bottom:0; width:20px; height:20px; overflow:hidden; background:url(./icon_selected.png) no-repeat; }
+.bank_list .hover,.bank_list li:hover{z-index:2; border-color:#fc9234; background:#fff5e7; color:#f89406; }
+.bank_list .hover .check{ display:block; }
+.pay_ipt { float:left; width:90px; height:30px; margin:1px 3px; overflow:hidden; background:url(./icon_pay_type.png); line-height:30; cursor:pointer; }
+.ipt_alipay { background-position:0 0; }
+.ipt_unionpay { background-position:0 -30px; }
+.ipt_weixin { background-position:0 -60px; }
+.ipt_jifen { background-position:0 -90px; }
+.pay_account { height:34px; }
+.pay_account strong { margin-right:5px; color:#f60; font-size:28px; line-height:35px; }
+
+/*-- 离线下载弹出框 --*/
+.xl_list { width:513px; margin:25px 0 25px 25px; border-radius:3px; }
+.xl_xx { width:300px; height:495px; margin:25px 25px 25px 0; border-radius:3px; border:1px dashed #d4d4d4; overflow:hidden; line-height:22px; }
+.xl_xx h3 { padding:0 10px; background:#f8f8f8; line-height:42px; height:42px;overflow:hidden; }
+.xl_xx p.mt4 { width:270px; overflow:hidden; text-overflow: ellipsis; }
+.xl_xx .title { display:inline-block; padding:1px 10px; border-radius:5px; background:#f8f8f8; }
+.xl_list2 { height:200px; overflow-y:scroll; }
+.xl_list2 p { height:25px; overflow:hidden; white-space:nowrap; }
+.xl_list2 p>span { display:inline-block; width:80px; }
+/*-- 相册列表 --*/
+.photo_grid ul { float:left; width:200px; margin:20px 0 0 20px; }
+.photo_grid li { width:200px; margin-bottom:20px; }
+.photo_grid li div.img { min-height:100px; border-radius:5px 5px 0 0; background:#efefef; text-align:center; }
+.photo_grid li div.img [class^=type_] { margin:40px auto;}
+.photo_grid li div.img img { display:block; max-width:200px; margin:0 auto; border-radius:5px 5px 0 0; }
+.photo_grid li div.border { padding:10px 15px; border-radius:0 0 5px 5px; border-top:none; }
+.photo_grid li div.bg1 { background:#e6ab89; min-height:200px; }
+.photo_grid li div.bg2 { background:#7aa6c9; min-height:180px; }
+.photo_grid li div.bg3 { background:#e9d0b2; min-height:130px; }
+/*------------------ 消息弹出框 ------------------*/
+.ico_del2 { display:inline-block; width:14px; height: 14px; background:url(icon.png); }
+.meg_type1,.meg_type2,.meg_type4 { display:block; width: 50px; height: 50px; background:url(icon_meg.svg); }
+.meg_type2 { background-position:-55px 0; }
+.meg_type4 { background:url(icon_meg-04.svg); }
+.meg_list { min-height: 410px; }
+.meg_list table { width: 100%; }
+.meg_list td { border-bottom:1px solid #f2f2f2; line-height:25px; }
+.meg_list td:first-child { width:50px; padding:15px; vertical-align:top; }
+.meg_list td:first-child img { width: 50px; height: 50px; }
+.meg_list td:nth-child(2) { width:500px; padding:15px 0; }
+.meg_list td:last-child { padding-right: 15px; }
+.meg_list .ico_del2 { display: none;}
+.meg_list tr:hover { background: #f3f4f6; }
+.meg_list tr:hover .ico_del2 { display:block; float:right; }
+.meg_list tr:hover .ico_del2:hover { background-position:0 -24px; }
+/*------------------ 搜索页 ------------------*/
+.search_tab { width:100%; }
+.search_tab .el-tabs__header { position:absolute; left:40px; top:-66px; width:550px; }
+.search_tab .el-tabs__item { height:40px; line-height:40px; color:#999; font-size:16px; font-weight:bold; }
+.search_tab .el-tabs--top .el-tabs__item:before { display:inline-block; float:left; width:20px; height:40px; content:""; }
+.search_tab .el-tabs--top .el-tabs__item:after { display:inline-block; float:right; width:20px; height:40px; content:""; }
+.search_tab .el-tabs__nav-wrap::after { background:transparent; }
+.search_tab .el-tabs__item.is-active { color:#484848; }
+.search_tab .el-tabs__item.is-active:before { background:url(../assets/icon_search.svg) no-repeat -40px center; }
+.result-warpper{height: 34px;line-height: 34px;position: absolute;top: 0;}
+/*------------------ 筛选 ------------------*/
+.tan_popup { width:294px; padding:25px 22px 18px 30px; }
+.btn_tan { display:inline-block; float:left; width:90px; height:32px; margin:0 8px 10px 0; border-radius:5px; background:#f9f9f9; color:#999; line-height:32px; text-align:center; cursor:pointer; }
+.btn_tan.hover { background:#eff6ff; color:#409eff; }
+.tan_popup .box .btn_tan { width:68px; margin-right:5px; }
+.tan_all,.tan_play,.tan_audio,.tan_file,.tan_pic,.tan_rar,.tan_jiami,.tan_nojiami,.tan_jiami2,.tan_nojiami2 { display:inline-block; width:20px; height:20px; margin-right:3px; background:url(../assets/icon_new.svg); vertical-align:middle; }
+.tan_all { background-position:0 -150px; }
+.tan_audio { background-position:-20px -150px; }
+.tan_play { background-position:-40px -150px; }
+.tan_file { background-position:-60px -150px; }
+.tan_rar { background-position:-80px -150px; }
+.tan_pic { background-position:-100px -150px; }
+.tan_jiami { background-position:-120px -150px; }
+.tan_nojiami { background-position:-140px -150px; }
+.tan_jiami2 { background-position:-160px -170px; }
+.tan_nojiami2 { background-position:-160px -150px; }
+.btn_tan.hover .tan_all { background-position:0 -170px; }
+.btn_tan.hover .tan_audio { background-position:-20px -170px; }
+.btn_tan.hover .tan_play { background-position:-40px -170px; }
+.btn_tan.hover .tan_file { background-position:-60px -170px; }
+.btn_tan.hover .tan_rar { background-position:-80px -170px; }
+.btn_tan.hover .tan_pic { background-position:-100px -170px; }
+.btn_tan.hover .tan_jiami { background-position:-120px -170px; }
+.btn_tan.hover .tan_nojiami { background-position:-140px -170px; }
+.btn_tan2 { margin:0 10px; color:#999; cursor:pointer; }
+.btn_tan2.hover { color:#333; }
+.btn_tan2.hover .tan_jiami2 { background-position:-120px -170px; }
+.btn_tan2.hover .tan_nojiami2 { background-position:-140px -170px; }
+/* 星标 */
+.star_biao{display: inline-block;width: 16px;height: 20px;background: url('http://cdnres-huiyuan.bianyue.cn/lyl/img/icon_star.svg') no-repeat;background-position-x: 0;background-position-y: 5px;cursor: pointer;margin-left: 5px;}
+.star_biao:hover{background-position-x: -16px;}
+.star_biao.active{background-position-x: -32px; }

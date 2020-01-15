@@ -1,0 +1,113 @@
+@charset "utf-8";
+.align_center { align-items:center; }
+.view_box2.main_music { height:calc(100% - 140px); background:rgba(255,255,255,.66); box-shadow:0 0 15px rgba(69,161,244,.2); box-sizing:border-box; }
+.pad0.el-popover { padding:0; }
+
+.bg_music { background:linear-gradient(to right top,#eef2f7,#fff); }
+.play_all { display:inline-block; width:30px; height:30px; background:url(../assets/icon_music.svg)-90px 0; }
+/*-- 头部 --*/
+.header_music { width:300px; right:0; position:absolute; z-index:12; height:80px; }
+.header_music .top_right { width:300px; max-width:300px; }
+.ico_linshi,.ico_recent { display:inline-block; width:100px; height:100px; border-radius:10px; background:linear-gradient(to right top,#40b1ff,#409eff,#0688ff); }
+.ico_linshi:before,.ico_recent:before { display:block; width:80px; height:80px; margin:10px; background:url(../assets/icon_music.svg) 0 -195px; content:""; }
+.ico_recent:before { background-position:-80px -195px; }
+.btn_music_add { display:inline-block; width:100px; height:100px; border-radius:10px; border:1px dashed #409eff; box-sizing:border-box; text-align:center; color:#409eff; opacity:0.8; cursor:pointer; }
+.btn_music_add i.i_new { display:block; width:45px; height:45px; margin:18px auto 7px; background:url(../assets/icon_music.svg) -160px -195px; }
+.btn_music_add i.i_add { display:block; position:relative; width:40px; height:40px; margin:20px auto 10px; border-radius:50%; transition:all .5s; }
+.btn_music_add i.i_add:after,.btn_music_add i.i_add:before { display:inline-block; background:#409eff; content:""; transition:all .5s; }
+.btn_music_add i.i_add:after { width:26px; height:2px; margin:19px auto; }
+.btn_music_add i.i_add:before { position:absolute; top:7px; right:19px; width:2px; height:26px; }
+.btn_music_add:hover i.i_add { background:linear-gradient(to right top,#40b1ff,#409eff,#0688ff); }
+.btn_music_add:hover i.i_add:after,.btn_music_add:hover i.i_add:before { background:#fff; }
+.btn_music_add:hover { opacity:1; }
+/*-- 左侧 --*/
+.left_music { padding-top:167px; -webkit-overflow-scrolling:touch; }
+.left_music li { margin-bottom:16px; border-right:2px solid #fdfdfd; transition:all 0.2s; }
+.left_music a { display:block; position:relative; width:100px; height:26px; line-height:26px; padding:0 40px 0 108px; color:#999; font-size:15px; }
+.left_music i { display:inline-block; position:absolute; left:71px; bottom:1px; width:30px; height:30px; }
+.left_music li.hover { border-right-color:#409eff; }
+.left_music li.hover a { color:#484848; font-weight:bold; }
+.left_music li.hover i { display:inline-block; width:30px; height:30px; margin:0 auto; background:url(../assets/icon_music.svg) no-repeat;}
+.left_music li.hover i.linshi { background-position:0 0; }/*临时听单*/
+.left_music li.hover i.my { background-position:-30px 0; }/*我的听单*/
+.left_music li.hover i.recent { background-position:-60px 0; }/*最近播放*/
+/*-- 底部操作栏 --*/
+.bar_music { position:fixed; bottom:0; width:100%; height:80px; background:#fff; box-shadow:0 0 10px rgba(182,197,217,.2); }
+.bar_music:before { display:inline-block; position:absolute; z-index:-1px; right:50px; top:-60px; width:230px; height:60px; background:url(../assets/icon_music.svg) 0 -275px; content:""; }
+/*小动画*/
+.music_player { position:absolute; left:45px; top:-80px; }
+.player1:after,.player1:before { display:inline-block; position:absolute; content:""; border-radius:50%; }
+.player1:after { z-index:1; top:0; left:0; width:142px; height:142px; background:url(../assets/icon_music.svg) 0 -335px; }
+.player1:before { z-index:2; top:4px; left:4px; width:134px; height:134px; background:url(../assets/icon_music.svg)-142px -335px; }
+.player2 { position:absolute; z-index:2; top:110px; left:80px; width:130px; height:20px; background:url(../assets/music2.png); transform-origin:111px 10px; }
+.player3 { position:absolute; top:102px; left:173px; width:33px; height:33px; background:url(../assets/music3.png); }
+.player1:after { animation:move_wave 3s linear infinite 1.6s; }
+@keyframes move_wave
+{
+    0% { transform:rotate(0deg); }
+    50% { transform:rotate(180deg); }
+    100% { transform:rotate(360deg); }
+}
+.player2 { animation:move_wave2 1.5s ease; }
+@keyframes move_wave2
+{
+    0% { transform:rotate(-30deg); }
+    100% { transform:rotate(0deg); }
+}
+/*小动画 音乐波动*/
+.music_wave { display:inline-block; width:16px; height:14px; }
+.music_wave i { display:inline-block; width:2px; height:10px; margin:0 2px 0 0; background:#409eff; }
+.music_wave i.i1 { height:14px; animation:music_wave 3s linear infinite 1.6s; }
+.music_wave i.i2 { height:10px; animation:music_wave 2s linear infinite 1.6s; }
+.music_wave i.i3 { height:8px; animation:music_wave 1s linear infinite 0.6s; }
+.music_wave i.i4 { height:6px; animation:music_wave 0.5s linear infinite 1.6s; }
+@keyframes music_wave
+{
+    0% { height:14px; }
+    50% { height:8px; }
+    100% { height:6px; }
+}
+/*操作*/
+.bar_music .name { width:300px; margin:0 25px 0 270px; flex-grow:0.1; }
+.bar_music .operate { width:400px; }
+.bar_music .jindu { width:400px; margin:0 25px; border:1px solid #ccc; }
+.bar_music .operate2 { width:220px; margin-right:55px; flex-shrink:0; }
+.m_prev,.m_next,.m_play,.m_pause.m_order,.m_random,.m_unlimited,.m_single { display:inline-block; width:30px; height:30px; background:url(../assets/icon_music.svg); opacity:0.8; }
+.m_prev { width:60px; background-position:-120px -30px; }/*上一首*/
+.m_next { width:60px; background-position:-180px -30px; }/*下一首*/
+.m_play { width:60px; height:60px; background-position:-270px -60px; }/*播放*/
+.m_pause { width:60px; height:60px; background-position:-270px -120px; }/*暂停*/
+.m_order { background-position:-120px 0; }/*顺序循环*/
+.m_random { background-position:-150px 0; }/*随机循环*/
+.m_unlimited { background-position:-180px 0; }/*无限循环*/
+.m_single { background-position:-210px 0; }/*单曲循环*/
+.m_prev:hover,.m_next:hover,.m_play:hover,.m_pause:hover,.m_order:hover,.m_random:hover,.m_unlimited:hover,.m_single:hover { opacity:1; }
+/*收藏 音量 下载 歌词*/
+.m_fav,.m_volume,.m_down,.m_lyric,.m_fav_hover,.m_volume,.m_down_hover,.m_lyric_hover { display:inline-block; width:30px; height:30px; background:url(../assets/icon_music.svg); }
+.m_fav { background-position:-240px 0; }/*收藏*/
+.m_volume { background-position:-270px 0; }/*音量*/
+.m_down { background-position:-300px 0; }/*下载*/
+.m_lyric { background-position:-330px 0; }/*歌词*/
+.m_fav_hover,.m_fav:hover { background-position:-240px -30px; }
+.m_volume_no { background-position:-270px -30px; }
+.m_down_hover,.m_down:hover { background-position:-300px -30px; }
+.m_lyric_hover,.m_lyric:hover { background-position:-330px -30px; }
+/*-- 右侧 --*/
+.music_top { margin:40px 0 0 60px; }
+.list_music { margin-left:40px; }
+.list_music li { float:left; width:133px; margin:10px 20px 50px; }
+.list_music li div { position:relative; width:133px; height:133px; border-radius:13px; background:linear-gradient(to right top,#40b1ff,#409eff,#0688ff); transition:all .3s; }
+.list_music li div:after,.list_music li div:before { display:block; position:absolute; top:0; left:0; width:133px; height:133px; border-radius:13px; content:""; }
+.list_music li div:before { background:linear-gradient(to right top,#40b1ff,#409eff,#0688ff); opacity:0.4; }
+.list_music li div:after { background:url(../assets/icon_music.svg) 0 -60px; }
+.list_music li div img { width:133px; height:133px; border-radius:13px; }
+.list_music li .music_wave { display:none; }
+.list_music p.f15 { margin:10px 5px 3px; height:25px; line-height:25px; }
+.list_music p.gray { margin:0 5px; height:25px; line-height:25px; }
+.list_music p.gray .more { display:inline-block; width:25px; height:25px; background:url(../assets/icon_music.svg) 0 -30px; border-radius:50%; transition:all .3s; }
+.list_music li:hover div { box-shadow:0 0 10px rgba(6,136,255,.4); }
+.list_music li:hover .more { background-color:#efefef; }
+.list_music li.hover div:after { background:url(../assets/icon_music.svg) -133px -60px; }
+.list_music li.hover .music_wave { display:block; position:absolute; z-index:10; right:10px; bottom:10px; }
+.list_music li.hover .music_wave i { background:#fff; }
+.music_word { position:absolute; z-index:15; top:0; right:0; width:440px; height:100%; padding:40px; box-sizing:border-box; background:linear-gradient(to right,#40b1ff,#409eff,#0688ff); opacity:0.9; color:#fff; }

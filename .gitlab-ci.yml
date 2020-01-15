@@ -1,0 +1,52 @@
+stages:
+  - install_deps
+#  - test
+  - build
+  - deploy_test
+#  - deploy_production
+cache:
+  key: nodejs_cache_vip
+  untracked: true
+  paths:
+    - node_modules/
+    - dist/
+# 安装依赖
+install_deps:
+  stage: install_deps
+  only:
+    #- develop
+    - master
+  script:
+    - cnpm install
+# 运行测试用例
+#test:
+#  stage: test
+#  only:
+#    - develop
+#    - master
+#  script:
+#    - npm run test
+# 编译
+build:
+  stage: build
+  only:
+    - master
+  script:
+    - npm run buildTo102
+# 部署测试服务器
+deploy_test:
+  stage: deploy_test
+  only:
+    - master
+  script:
+    - pwd
+    - ls
+    - scp -r ./dist/* i-20:/www/wwwroot/yun.gaibian.bianyue.cn
+    - ssh i-20   "chown -R www:www  /www/wwwroot/yun.gaibian.bianyue.cn/"
+# 部署生产服务器
+#deploy_production:
+#  stage: deploy_production
+#  only:
+#    - master
+#  script:
+#    - bash scripts/deploy/deploy.sh

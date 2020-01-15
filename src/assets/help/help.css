@@ -1,0 +1,64 @@
+ 
+/* 弹性布局 */
+.flex { display:flex; flex-direction:row; }
+.flex_end { justify-content:flex-end; } 
+.flex_center { justify-content:center; }
+.flex_between { justify-content:space-between; }
+.flex_around { justify-content:space-around; }
+/*头部*/
+.help_bg { z-index:0; height:200px; background:linear-gradient(to right,#51acfe,#88cd6a); color:#fff; }
+.help_bg:before { display:block; position:absolute; z-index:-1;  top:0; width:100%; height:200px; background:url(bg_top.svg) repeat; opacity:0.15; content:""; }
+.help_bg a { color:#fff; }
+.ico_help { display:inline-block; width:36px; height:36px; background:url(icon_help_center.svg) -357px -57px; }
+.help_bg_gray { background:#f2f2f2; color:#303030; }
+.help_bg_gray:before { opacity:0.4; }
+.help_bg_gray a { color:#303030; }
+.help_bg_gray p,.help_bg_gray p>a { color:#007bff; }
+.help_bg_gray p>a.mr10 { color:#ff6805; }
+.help_bg_gray .ico_help { background-position:-407px -57px; }
+/*头部导航*/
+.help_nav { position:absolute; bottom:0; line-height:40px; font-size:18px; }
+.help_nav a { display:inline-block; width:94px; padding:0 10px; text-align:center; }
+.help_nav a.hover:after { display:block; height:3px; background:linear-gradient(to right,#51acfe,#88cd6a); content:""; }
+/*首页分类*/
+.help_sort>div { margin:50px 0; padding:4px; border-radius:6px; }
+.help_sort>div:hover { background:linear-gradient(to right,#51acfe,#88cd6a); }
+.help_sort dl { width:295px; border-radius:5px; border:1px solid #eee; background:#fff; }
+.help_sort dt span { display:block; width:100px; height:100px; margin:43px auto 0; background:url(icon_help_center.svg); }
+.help_sort dt .s2 { background-position:-100px 0; }
+.help_sort dt .s3 { background-position:-200px 0; }
+.help_sort dt p { text-align:center; font-size:20px; }
+.help_sort dd { padding:30px 30px 46px; }
+.help_sort dd a { display:block; line-height:24px; font-size:15px; }
+.help_sort dd a:before { display:inline-block; width:6px; height:6px; margin-right:18px; background:#919191; border-radius:50%; content:""; vertical-align:middle; }
+/*热门问题*/
+.help_hot { margin:50px 0; }
+.help_hot a { display:block; float:left; width:300px; height:30px; margin:0 50px 18px; line-height:30px; overflow:hidden; font-size:15px; }
+.help_hot a:before { display:inline-block; width:12px; height:12px; margin-right:18px; background:url(icon_help_center.svg) -454px -56px; content:""; vertical-align:middle; }
+/*联系我们*/
+.btn_help_content { display:inline-block; width:220px; height:46px; line-height:45px; border-radius:23px; background:#fd8352; color:#fff; font-size:16px; }
+.btn_help_content:before { display:inline-block; width:24px; height:24px; margin-right:18px; background:url(icon_help_center.svg) -313px -63px; content:""; vertical-align:middle; }
+.btn_help_content:hover { color:#fff; }
+/*底部*/
+.help_footer { padding:15px 0; line-height:26px; background:#fafafa; }
+.help_footer i { display:inline-block; width:1px; height:12px; margin:8px 10px 0; background:#999; vertical-align:top; font-size:0; }
+.help_footer_list a { margin:0 5px; }
+/*列表*/
+.help_list { height:560px; margin:50px; overflow:hidden; }
+.help_list li { border-bottom:1px dashed #f2f2f2; line-height:55px; font-size:15px; }
+.help_list a:before { display:inline-block; width:12px; height:12px; margin-right:18px; background:url(icon_help_center.svg) -454px -82px; content:""; vertical-align:middle; }
+/*詳細*/
+.help_title { margin-bottom:40px; padding:35px 0; border-bottom:1px dashed #f2f2f2; }
+.help_content{ min-height:600px; color:#666; list-style:outside; word-wrap:break-word; line-height:1.8; text-size-adjust:none; }
+.help_content h1 { color:#333; font-size:20px; font-weight:400; }
+.help_content h2,.help_content h3,.help_content h4,.help_content h5 { margin-top:17px; margin-bottom:8px; color:#333; font-weight:600; line-height:1.5; }
+.help_content h2{ font-size:18px; }
+.help_content h3{ font-size:16px; }
+.help_content h4{ font-size:14px; }
+.help_content h5{ font-size:12px; }
+.help_content h3.current { color:#449010; }
+.help_content p { margin-bottom:24px; }
+.help_content img { max-width:100%; height:auto; box-sizing:content-box; border:0; background:#fff; box-shadow:0 0 5px #ccc; }
+.help_content .time { margin:10px 0 20px; }
+.help_content .mar_left_17 { margin-left:17px; }
+.help_content .bg { margin-bottom:24px; padding:5px 10px; background:#f5f5f5; color:#515151; }

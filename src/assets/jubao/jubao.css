@@ -1,0 +1,33 @@
+/*头部*/
+.jubao_header { width:100%; background:#010042; }
+.jubao_header .container { width:1000px; height:268px; margin:0 auto; background:url(jubao_bg.jpg) no-repeat center; }
+.jubao_header .container a { display:block; width: 200px; height:76px; text-indent: -1000em; }
+.dhsf_header  .container { background:url(dhsf_bg.jpg) no-repeat center; }
+/*文章内容*/
+.article { padding:30px 40px 10px; border-radius:10px; background:#f9f9f9; font-size:16px; line-height:32px; }
+.article h2 { font-size:18px; color:#333; font-weight:700; }
+.article h3 { font-size:16px; color:#333; font-weight:700; margin:10px 0; }
+.article>p { margin:15px 0; }
+/*举报按钮*/
+.btn_jubao { display:block; width:440px; height:100px; margin:0 auto; border-radius:10px; background:#010042; color:#fff; text-align:center; font-size:34px; line-height:100px; cursor:pointer; }
+/*举报成功*/
+.desc_contents { position:relative; height:290px; margin:40px 0; border-radius:10px; border:1px solid #8585b2; background:#ecf4fc; color:#010042; }
+.desc_contents .net_police { position:absolute; top:-12px; left:-54px; width:166px; height:310px; background:url(net_police.png); }
+.desc_contents .cell { float:left; padding:20px 30px 0; height:270px; line-height:30px; }
+.desc_contents .cell h3 { font-size:24px; line-height:38px; }
+.desc_contents .cell p { margin:10px 0; padding-bottom:10px; border-bottom:1px dashed #8585b2; }
+.desc_contents a:hover { color:#a51506; }
+.desc_contents li { height:30px; line-height:30px; overflow:hidden; }
+.desc_contents li:before { display:inline-block; width:4px; height:4px; margin-right:8px; border-radius:50%; background:#010042; vertical-align:middle; content:""; }
+.desc_contents .cell_left { width:387px; padding-left:120px; }
+.desc_contents .cell_right { width:400px; border-left:1px solid #8585b2; }
+/*底部导航*/
+.dhsf_nav { margin:35px 0 10px;  }
+.dhsf_nav a { display:inline-block; margin:0 30px; color:#2b91e3; }
+.dhsf_nav a:hover {text-decoration:underline; }
+/*举报成功*/
+.jubao_success { padding:50px 0 0 50px; line-height:22px;}
+.jubao_success img { width:80px; margin-right:20px; }
+
+.help_list { height:448px; margin:0 0 30px; }
+.wrap { width:1000px; }
