@@ -14,7 +14,7 @@
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "cropper": "^4.0.0",
-    "dplayer": "^1.25.0",
+    "dplayer": "^1.27.0",
     "element-ui": "^2.4.5",
     "hls.js": "^0.11.0",
     "jquery": "^3.3.1",
